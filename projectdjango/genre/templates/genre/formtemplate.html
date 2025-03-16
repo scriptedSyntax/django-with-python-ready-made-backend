@@ -1,0 +1,23 @@
+{% extends 'genre/base.html' %}
+
+{% block content %}
+    <h2>Register - Made By Samuel Mwangi</h2>
+    
+    <form action="{% url 'register' %}" method="POST">
+        {% csrf_token %}  <!-- CSRF Token -->
+
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username" required>
+        <br>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required>
+        <br>
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" required>
+        <br>
+
+        <input type="submit" value="Register">
+    </form>
+{% endblock %}

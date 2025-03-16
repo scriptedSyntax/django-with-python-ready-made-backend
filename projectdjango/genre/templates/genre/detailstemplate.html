@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% extends 'genre/base.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Piece-By Samuel Mwangi</title>
+</head>
+<body>
+{% block content %}
+      {% for pieceobj in collection.piece_set.all %}
+          <div align="center">
+<!--&lt;!&ndash;          <img src="{{ pieceobj.collover }}" height="200" width="200">&ndash;&gt; this is the right syntax but i dont have the time to add that right now-->
+              <img src="https://media.tenor.com/_zWYqfZdneIAAAAM/shocked-face-shocked-meme.gif" height="200" width="200">
+              <h2>{{ pieceobj.title }} - {{ pieceobj.artist }}</h2>
+              <h3>{{ pieceobj.type }}</h3>
+              <h3>{{ pieceobj.year }}</h3>
+              <br>
+          </div>
+      {% endfor %}
+
+{% endblock %}
+</body>
+</html>
